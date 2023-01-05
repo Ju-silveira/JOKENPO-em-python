@@ -1,0 +1,56 @@
+from time import sleep
+from random import randint
+jo = ('JOKENPO')
+while True:
+	opi = ('papel','tesoura','pedra')
+	print(f'{jo:=^20}')
+	print('opições de jogadas')
+	print('''[0]papel
+[1]tesoura
+[2]pedra''')
+	jog = int(input('qual a sua jogada ?: '))
+	comp = randint(0,2)
+	sleep(1)
+	print('JO')
+	sleep(1)
+	print('KEN')
+	sleep(1)
+	print('PO')
+	print(20*'=')
+	sleep(1)
+	print(f'jogador jogou {opi[jog]}')
+	sleep(1)
+	print(f'computador jogou {opi[comp]}')
+	sleep(1)
+	print(20*'=')
+	sleep(1)
+	if jog == 0 :
+		if comp == 0:
+			print('EMPATE')
+		if comp == 1:
+			print('VEMSI')
+		if comp == 2:
+			print('VOCÊ VEMSEU')
+	if jog == 1:
+		if comp == 0:
+			print('VOCÊ VEMSEU')
+		if comp == 1:
+			print('EMPATE')
+		if comp == 2:
+			print('VEMSI')
+	if jog == 2:
+		if comp == 0:
+			print('VEMSI')
+		if comp == 1:
+			print('VOCÊ VEMSEU')
+		if comp == 2:
+			print('EMPATE')
+	while True:
+			comt = str(input('quer comtinuar ?:')).upper()
+			if comt == 'SIM' or comt == 'S':
+				break
+			if comt == 'NÃO' or comt == 'N' :
+				break
+	if comt == 'NÃO' or comt == 'N':
+		break
+		
