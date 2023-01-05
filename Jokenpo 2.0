@@ -1,0 +1,66 @@
+from tkinter import *
+from random import randint
+
+janela = Tk()
+
+def b1_papel():	
+	lb['text'] = 'PAPEL'
+	opi = ('papel','pedra','tesoura')
+	comp = randint(0,2)
+	lbb['text'] = opi[comp]
+	if comp == 0:
+		llb['text'] = 'EMPATE'
+	if comp == 1:
+		llb['text'] = 'JOGADOR VEMSEU'
+	if comp == 2:
+		llb['text'] = 'COMPUTADOR VEMSEU'
+
+def b2_pedra():
+	lb['text'] = 'PEDRA'
+	opi = ('papel','pedra','tesoura')
+	comp = randint(0,2)
+	lbb['text'] = opi[comp]
+	if comp == 0:
+		llb['text'] = 'COMPUTADOR VEMSEU'
+	if comp == 1:
+		llb['text'] = 'EMPATE'
+	if comp == 2:
+		llb['text'] = 'JOGADOR VEMSEU'
+	
+	
+def b3_tesoura():
+	lb['text'] = 'TESOURA'
+	opi = ('papel','pedra','tesoura')
+	comp = randint(0,2)
+	lbb['text'] = opi[comp]
+	if comp == 0:
+		llb['text'] = 'JOGADOR VEMSEU'
+	if comp == 1:
+		llb['text'] = 'COMPUTADOR VEMSEU'
+	if comp == 2:
+		llb['text'] = 'EMPATE'
+		
+b1= Button(janela , width=5 ,text='papel',command=b1_papel)
+b1.place(x=50, y=1000)
+
+b2 = Button(janela, width=5, text='pedra', command=b2_pedra)
+b2.place(x=250, y=1000)
+
+b3 = Button(janela, width=5, text='tesoura', command=b3_tesoura)
+b3.place(x=450, y=1000)
+
+lb = Label(janela, text='EM ESPERA...')
+lb.place(x=250 , y=800)
+lbb = Label(janela,text="EM ESPERA...")
+lbb.place(x=250, y=150)
+llb = Label(janela, text='EM ESPERA...')
+llb.place(x=250, y=500)
+
+lb1= Label(janela, text='papel')
+lb1.place(x=50, y=50)
+lb2 = Label(janela, text='pefra')
+lb2.place(x=250, y=50)
+lb3 = Label(janela, text='tesoura')
+lb3.place(x=450, y=50)
+
+janela.mainloop()
